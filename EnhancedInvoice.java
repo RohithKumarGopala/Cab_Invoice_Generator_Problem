@@ -1,7 +1,6 @@
 package com.cabInvoiceGenerator;
 
-import java.util.Scanner;
-public class MultipleRidesInvoice {
+public class EnhancedInvoice {
     double distance;
     double time;
     private static final double minCostPerKm = 10;
@@ -22,7 +21,7 @@ public class MultipleRidesInvoice {
         return ride2;
     }
     public static void main(String[] args) {
-        MultipleRidesInvoice rides = new MultipleRidesInvoice();
+        EnhancedInvoice rides = new EnhancedInvoice();
         rides.RideOne();
         rides.RideTwo();
     }
