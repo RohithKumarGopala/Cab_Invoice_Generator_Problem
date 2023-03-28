@@ -1,15 +1,42 @@
 package com.cabInvoiceGenerator;
 
 public class InvoiceDetails {
-    private static final double MIN_COST_PER_KILOMETER = 10;
-    private static final double COST_FOR_TIME = 1;
-    private static final double MINIMUM_AMOUNT = 5;
+    private final int userId;
+    private final int numberOfRides;
+    private final double totalFare;
+    private double averageFare;
 
-    public double travelCost(double distance, double time) {
-        double cost = distance * MIN_COST_PER_KILOMETER + time * COST_FOR_TIME;
-        if (cost < MINIMUM_AMOUNT)
-            return MINIMUM_AMOUNT;
-        return cost;
+    public InvoiceDetails(int userId, int numberOfRides, double totalFare) {
+        this.userId = userId;
+        this.numberOfRides = numberOfRides;
+        this.totalFare = totalFare;
+        this.averageFare = averageFare;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public int getNumberOfRides() {
+        return numberOfRides;
+    }
+
+    public double getTotalFare() {
+        return totalFare;
+    }
+
+    public double getAverageFare() {
+        return averageFare;
+    }
+
+    @Override
+    public String toString() {
+        return "InvoiceGenerator{" +
+                "userId=" + userId +
+                ", numberOfRides=" + numberOfRides +
+                ", totalFare=" + totalFare +
+                ", averageFare=" + averageFare +
+                '}';
     }
 }
 
